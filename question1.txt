@@ -1,0 +1,27 @@
+Question Title: Advanced File Management
+Question Link: https://my.newtonschool.co/playground/code/4ks5o139cfoh?lecture_hash=v210chxjexei
+
+Solution:
+1. mkdir project-files 
+2. cd project-files
+3. touch {report,summary,draft}.docx
+4. cp report.docx report_backup.docx
+5. mkdir old
+6. mv draft.docx old/
+7. mv summary.docx final_summary.docx
+8. cp final_summary.docx old/
+9. rm report_backup.docx
+
+Approach:
+1. First, I've made a directory named project-files 
+2. Secondly, got directed into the directory 
+3. Then, made the files named report.docx, summary.docx and draft.docx 
+4. Next, I've copied the report.docx file to report_backup.docx
+5. Then made another directory inside the current directory, named old
+6. Inside the old directory, I've moved the draft.docx
+7. Nextly, renamed the summary.docx file to final_summary.docx
+8. Then copied the final_summary.docx file to old directory
+9. Lastly, removed the report_backup.docx file 
+
+Result:
+The project-file directory now contains report.docx file and copied report_backup.docx file and a directory named old which contains renamed final_summary.docx. The report_backup.docx has been removed.
