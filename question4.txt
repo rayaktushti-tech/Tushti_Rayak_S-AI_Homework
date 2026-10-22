@@ -1,0 +1,16 @@
+Question Title: Deployment Project Permissions
+Question Link:
+https://my.newtonschool.co/playground/code/3wz3wv7c89fo?lecture_hash=vifkrugjcwth
+
+Solution:
+chmod 700 deployment/app/*.py
+chmod 770 -R deployment/datasets/
+chmod 644 deployment/docs/OVERVIEW.md
+chmod 755 deployment/bin/*.sh
+
+Approach:
+1. Navigated into the deployment directory by using cd command and did ls to list all the folders inside it.
+2. Next, changed the permission of app directory and all the fies inside it to (Owner: read, write, execute Group: no access Others: no access) by using chmod command and *.py wildcard.
+3. The permission of datasets directory and the files inside it to (Owner: read, write, execute Group: read, write, execute Others: no access) using chmod and -R.
+4. Then, changed the permission of docs/OVERVIEW.md to (Owner: read, write Group: read only Others: read only) using chmod 
+5. Lastly, changed the permission of bin and files inside it to (Owner: read, write, execute Group: read, execute (no write) Others: read, execute (no write)) usingchmod and *.sh wildcard.
