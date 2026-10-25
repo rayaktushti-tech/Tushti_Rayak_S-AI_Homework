@@ -1,0 +1,19 @@
+Question title: Simplify the Compilation Process
+Question link:
+https://my.newtonschool.co/playground/code/9kh4giios2j4?lecture_hash=t5qc0u6ap8tg
+
+Solution:
+touch build.sh
+#!/bin/bash
+gcc hello.c -o hello 
+chmod +x build.sh
+./build.sh
+./hello
+
+Approach:
+1. Created file named build.sh
+2. Wrote the command path using the shebang operator.
+3. Using the gcc command, read the contenets inside the file hello.c and to execute it in the name hello.
+4. Changed the permission of build.sh to executable.
+5. Called the build.sh command and hello.
+
