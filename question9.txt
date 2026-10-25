@@ -1,0 +1,30 @@
+Question Title: Build Pipeline Directory Tree
+Question Link:
+https://my.newtonschool.co/playground/code/r2ui5gw5lhqt?lecture_hash=n9ynhcuvkld8
+
+Solution:
+mkdir -p pipeline/stages/build
+mkdir -p pipeline/stages/test/unit/integration
+mkdir -p pipeline/env/staging
+mkdir -p pipeline/env/prod
+mkdir -p pipeline/artifacts/old
+
+chmod 750 pipeline/stages
+chmod 770 pipeline/artifacts
+chmod 700 pipeline/env
+
+cd pipeline/stages/build/
+touch app.py config.json NOTES.md
+echo "Build stage initialized." > NOTES.md
+
+cd ../..
+cd artifacts/old/
+touch build.log test.log deploy.log
+chmod 640 build.log test.log deploy.log
+
+
+Approach:
+1. Firstly started making all the folders and files, according to the question.
+2. Changed the permissions of pipeline/stages, pipeline/artifacts and pipeline/env to 750, 770 and 700 rrespectively using chmod command.
+3. Navigated into thr build/ directory and created files app.py, config.json and NOTES.md using touch command and appended "Build stage initialized." inside NOTES.md.
+4. Navigated into the old/ directory and created files build.log, test.log and deploy.log using chmod command and changed all of theirs permission to 640 using chmod command.
