@@ -1,0 +1,14 @@
+Question Title: The Missing Project Credentials
+Question LInk:
+https://my.newtonschool.co/playground/code/7x83ezx6nimm
+
+Solution:
+grep -r "DB_PASSWORD" .
+pwd
+cat EventApp/config/.env > EventApp/db_password.txt
+
+Approach:
+1. Using the "grep -r "DB_PASSWORD" ." command I got to know where the DB_PASSWORD is.
+2. The command gave "./EventApp/config/.env:DB_PASSWORD=EvT_9032_1792944525_22002" as the output.
+3. Did pwd to know the exact directory.
+4. Using the cat command, I appended the text of EventApp/db_password.txt to EventApp/config/.env.
